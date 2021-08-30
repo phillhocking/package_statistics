@@ -1,0 +1,12 @@
+# Local Python venv directories
+**/bin**
+**/include**
+**/lib**
+**/lib64**
+**/share**
+
+# Python venv config
+pyvenv.cfg 
+
+# Temporary file
+file.gz
