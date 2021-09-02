@@ -5,6 +5,10 @@
 **/lib64**
 **/share**
 
+# Pytest directories/file4s
+**__pycache__**
+**.pytest_cache**
+
 # Python venv config
 pyvenv.cfg 
 
