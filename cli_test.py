@@ -1,8 +1,8 @@
-"""tests.py unit tests for package_statistics.py."""
+"""cli_test.py unit tests for package_statistics.py."""
 import pytest
 from cli_test_helpers import ArgvContext
 
-target = __import__("package_statistics.py")
+import package_statistics
 
 
 @patch("package_statistics.command.amd64")

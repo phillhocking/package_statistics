@@ -23,17 +23,17 @@ import aiofiles
 import aiohttp
 
 
-async def main():
+async def main(argv=sys.argv):
     """Primary application coroutine."""
-    """Instantiate argparse to collect required paramaters, validate input, and
-    catch/throw errors."""
+    # Instantiate argparse to collect required paramaters, validate input, and
+    # catch/throw errors.
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "arch",
         help="architecture to gather statistics for Debian packages",
         type=str,
     )
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     result = await fetch(args.arch)
 
 
