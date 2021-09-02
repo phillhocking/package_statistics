@@ -120,5 +120,9 @@ async def disp(top_ten):
         count += 1
 
 
+# If calling main via script/test, use correct namespace.
+if __name__ == "__main__":
+    asyncio.run(main(sys.argv[1:]))
+
 # Invoke main() via async coroutine call.
 asyncio.run(main(sys.argv[1:]))
