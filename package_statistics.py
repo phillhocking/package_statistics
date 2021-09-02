@@ -8,7 +8,7 @@ largest number of installed files for a particular system architecture via the
 Contents Index for the Debian package system hosted on official Debian mirror.
 
 This application was written for Ubuntu 20.04.02 - on a base install you must
-pip install aiofiles aiohttp
+pip install requirements.txt
 """
 import argparse
 import asyncio
@@ -39,7 +39,7 @@ async def main(argv=sys.argv):
 
 async def fetch(arch):
     """Fetch repository Contents Index and return sorted output."""
-    """Instantiate dictionary which will contain aiohttp session data."""
+    # Instantiate dictionary which will contain aiohttp session data.
     mydict = {}
     # Instantiate aiohttp session as async call to fetch repository data from
     # Debian mirror.
@@ -121,4 +121,4 @@ async def disp(top_ten):
 
 
 # Invoke main() via async coroutine call.
-asyncio.run(main())
+asyncio.run(main(sys.argv[1:]))
