@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Above shebang format should work on most platforms per PEP 394.
 """
-package_statistics 0.2 by Phillip Hocking (phillhocking@gmail.com).
+package_statistics 1.10 by Phillip Hocking (phillhocking@gmail.com).
 
 This application is intended to fetch and analyze the ten packages with the
 largest number of installed files for a particular system architecture via the
