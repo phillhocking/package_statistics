@@ -1,14 +1,21 @@
 """cli_test.py unit tests for package_statistics.py."""
+import os
+import subprocess
+import sys
+
 import pytest
 
-import package_statistics
+cwd = subprocess.call("pwd", shell=True)
+print(cwd)
 
 
-@pytest.fixture
-def run(args):
-    """Run package_statistics.py with arguments."""
-    package_statistics.main(args)
+def test_entrypoint():
+    """Test entry point exit 2 for usage."""
+    exit_status = subprocess.call("package_statistics")
+    assert exit_status == 2
 
 
-run(amd64)
-run(baz)
+def test_validarch():
+    """Test with valid arch argument."""
+    exit_status = subprocess.call(["package_statistics", "amd64"])
+    assert exit_status == 0
