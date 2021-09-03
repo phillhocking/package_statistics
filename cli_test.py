@@ -6,7 +6,6 @@ import sys
 import pytest
 
 cwd = os.getcwd()
-print(cwd)
 
 
 def test_entrypoint():

@@ -16,5 +16,5 @@ jobs:
         run: pip install pipenv
       - name: Run tests
         run: |
-          pipenv install
-          pipenv run pytest
+          sudo pipenv install
+          sudo pipenv run pytest
