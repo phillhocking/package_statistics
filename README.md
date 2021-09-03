@@ -3,7 +3,7 @@
 
 Python project to display statistics about Debian packages by architecture, specifically the amount of files that are installed by a particular `deb` package. 
 
-Usage: `package_statistics.py amd64`
+Usage: `package_statistics.py arch`
 
 Example Output: 
 
